@@ -1,7 +1,7 @@
 /**
   * 书
   * 
-  * @author 夏苒 <qiuyan.mqy@alibaba-inc.com>
+  * @author 作者 <邮箱>
   * @version v1.0.0
   * 
   * @example const book = new Book(title, author);
