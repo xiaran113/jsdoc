@@ -14,6 +14,52 @@ JSDoc是一个根据javascript文件中注释信息，生成JavaScript应用程�
 1. 首先JSDoc定义了一套注释规范，要自动生成文档就必须按照JSDoc的规范来写注释，这样可以统一注释规范。
 2. 写完组件后需要去更新组件的文档，相当于要维护两套东西，而使用JSDoc以后，只要更新组件的注释，就能同步组件文档，可以减少对组件文档的维护。
 
+### JSDoc规范
+
+##### 类描述信息
+
+```javascript
+    /**
+      * 书
+      * 
+      * @author 夏苒 <qiuyan.mqy@alibaba-inc.com>
+      * @version v1.0.0
+      * 
+      * @example const book = new Book(title, author);
+      */
+    class Book {
+        
+    }
+```
+
+##### 构造函数
+
+```javascript
+    /**
+     * 构造一本书
+     * @param options {object} 选项
+     * @param [options.title] {string} 标题
+     * @param [options.author] {string} 作者
+     * @returns {Book}
+     */
+    constructor(options) {
+        this.title = options.title;
+        this.author = options.author;
+    }
+```
+
+##### 方法
+
+```javascript
+    /**
+     * 设置书的标题
+     * @param {string} title='' - 新标题
+     */
+    setTitle(title) {
+        this.tile = title;
+    }
+```
+
 ### jsdoc2md
 
 jsdoc-to-markdown 是一个可以将jsdoc生成markdown的工具，你可以使用工具提供的模版，也可以自定义模版。具体安装方式可以参考jsdoc2md的文档 [jsdoc-to-markdown](https://github.com/jsdoc2md/jsdoc-to-markdown/blob/master/docs/API.md) 和 [jsdoc-to-markdown wiki](https://github.com/jsdoc2md/jsdoc-to-markdown/wiki)，基本上可以解决大部分问题。
