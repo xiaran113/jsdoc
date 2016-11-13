@@ -242,3 +242,24 @@ API的描述，其实跟组件的描述是同一个文档，可以理解为设�
 ### params
 
 API的参数列表，我们只要按照文档规范，细调一下顺序即可。
+
+### 主流IDE的JSDoc插件
+
+idea和webstorm5.0以上自带JSDoc工具
+
+[sublime text3](https://github.com/spadgos/sublime-jsdocs/)和[atom](https://atom.io/packages/docblockr)推荐使用DocBlockr插件，只要输入/**按回车会根据你的方法类型自动生成文档模版，非常方便
+
+```javascript
+    /**
+     * [constructor description]
+     * @param  {[type]} options [description]
+     * @return {[type]}         [description]
+     */
+    constructor(options) {
+        this.title = options.title;
+        this.author = options.author;
+
+    }
+```
+
+vim党可以使用vim-jsdoc
