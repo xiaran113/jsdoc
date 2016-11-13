@@ -1,0 +1,32 @@
+{{#orphans ~}}
+
+{{>header~}}
+
+{{>description~}}
+{{#if author}}{{#each author}}**作者:** {{{inlineLinks this}}}  
+{{/each}}{{/if~}}
+{{#if version}}**版本:** {{inlineLinks version}}  
+{{/if~}}
+
+### API
+
+{{#children inherited=undefined ~}}
+
+##### {{this.memberof}}.{{this.name}} {{>description~}}
+
+{{#if params}}
+
+{{tableHead params "name|属性" "description|说明" "type|类型" "defaultvalue|默认值" ~}}
+
+{{#tableRow params "name" "description" "type" "defaultvalue" ~}}
+| {{#if @col1}}{{>param-table-name}} | {{/if~}}
+{{#if @col2}}{{{stripNewlines (inlineLinks description)}}} |{{/if~}}
+{{#if @col3}}{{>linked-type-list types=type.names delimiter=" &#124; " }} | {{/if~}}
+{{#if @col4}}{{>defaultvalue}} | {{/if}}
+{{/tableRow}}
+
+{{/if}}
+
+{{/children~}}
+
+{{/orphans~}}
